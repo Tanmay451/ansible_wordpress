@@ -34,7 +34,7 @@ Once you're ready to go there are just a few things to configure:
 ##Start the playbook
 To start the playbook just go to the project folder and launch the command
 
-    $ansible-playbook playbooks/deploy-wordpress.yml
+    $ ansible-playbook playbooks/deploy-wordpress.yml
     
 You can go further in editing by creating another user for the DB instead of using 'root' and securing locking down the
 instance with iptables or ohter staff, but this is not the purpose of this simple demo.
