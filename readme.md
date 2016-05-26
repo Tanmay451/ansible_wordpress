@@ -30,6 +30,10 @@ Once you're ready to go there are just a few things to configure:
 
         [wp-group]
         instance1   ansible_host=54.23.124.76
+        
+To start the playbook just go to the project folder and launch the command
+
+    $ansible-playbook playbooks/deploy-wordpress.yml
     
 You can go further in editing by creating another user for the DB instead of using 'root' and securing locking down the
 instance with iptables or ohter staff, but this is not the purpose of this simple demo.
