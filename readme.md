@@ -31,6 +31,7 @@ Once you're ready to go there are just a few things to configure:
         [wp-group]
         instance1   ansible_host=54.23.124.76
         
+##Start the playbook
 To start the playbook just go to the project folder and launch the command
 
     $ansible-playbook playbooks/deploy-wordpress.yml
