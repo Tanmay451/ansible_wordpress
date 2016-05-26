@@ -1,0 +1,14 @@
+- name: configurazione e installazione delle istanze
+  hosts: wp-group
+
+  tasks:
+
+    - include_vars: ../conf/mysql.cfg
+    - include_vars: ../conf/wpconfig.cfg
+
+    - include: tasks/install-utils.yml
+    - include: tasks/install-apache.yml
+    - include: tasks/install-php.yml
+    - include: tasks/install-mysql.yml
+    - include: tasks/configure-mysql.yml
+    - include: tasks/install-wordpress.yml

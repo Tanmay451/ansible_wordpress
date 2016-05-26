@@ -1,0 +1,4 @@
+- name: install apache
+  become: yes
+  become_method: sudo
+  apt: name=apache2 state=latest

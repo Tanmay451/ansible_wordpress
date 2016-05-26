@@ -1,0 +1,32 @@
+- name: Start the MySQL service
+  become: yes
+  become_method: sudo
+  service:
+    name: mysql
+    state: started
+    enabled: true
+
+- name: update mysql root password
+  mysql_user:
+    name: root
+    password: "{{ mySqlRootPassword }}"
+    login_user: root
+    login_password: "{{ mySqlRootPassword }}"
+    check_implicit_admin: yes
+    priv: "*.*:ALL,GRANT"
+
+- name: remove anonimuos user
+  mysql_user:
+    name: ''
+    state: absent
+    login_user: root
+    login_password: "{{ mySqlRootPassword }}"
+    check_implicit_admin: yes
+
+- name: create wordpress Database
+  mysql_db:
+    login_user: root
+    login_password: "{{ mySqlRootPassword }}"
+    name: wordpress
+    state: present
+
