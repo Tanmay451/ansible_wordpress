@@ -1,4 +1,4 @@
-- name: configurazione e installazione delle istanze
+- name: wordpress instance setup
   hosts: wp-group
 
   tasks:
